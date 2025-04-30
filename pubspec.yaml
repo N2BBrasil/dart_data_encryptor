@@ -1,7 +1,7 @@
 name: data_encryptor
 description: "A data encryptor package for flutter."
-version: 1.0.0
-publish_to: 
+version: 1.0.0+1
+publish_to:
 
 environment:
   sdk: ^3.5.1

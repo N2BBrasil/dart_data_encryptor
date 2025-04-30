@@ -18,7 +18,6 @@ class DataEncryptor {
 
   final _EncrypterInstance _encrypter;
 
-  @override
   String encrypt(String plainText) {
     final iv = IV.fromLength(16);
     final encryptedPlainText = _encrypter.encrypt(plainText, iv: iv);
@@ -31,7 +30,6 @@ class DataEncryptor {
     return utf8.fuse(base64).encode(value);
   }
 
-  @override
   String decrypt(String value) {
     final parts = utf8.fuse(base64).decode(value).split(':');
     final iv = IV.fromBase16(parts[0]);
